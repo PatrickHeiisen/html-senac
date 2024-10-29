@@ -1,0 +1,5 @@
+! -->> cria estrutura
+</html> -->> sempre que tiver barra e fechamento
+<!-- Tela -->  -->> Comentario
+alt + z -->> quebra linha
+3em -->> texto padrao (3em 16px)
