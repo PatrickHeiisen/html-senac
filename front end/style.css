@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+/*Fontes Externas*/
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Variaveis*/
+
+:root{
+    --cor1: #5F9EA0; /*botao*/
+    --cor2: #000000; /*fontes*/
+    --cor3: #8A2BE2;
+    --cor4: #F0FFFF;
+    --cor5: #EEE8AA;
+    --cor6: #9ACD32; /*menu, rodape, cartao*/
+
+    --titulo: 'Pacifico display', 'sans-serif';
+    --texto: 'Sour Gummy', 'sans-serif';
+}
+
+/*Reset CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #8A2BE2;
+}
+
+/*Layout*/
+.container{
+    display: flex;
+}
+
+/*Celular Portrait - em pe*/
+
+/*Celular Lansdcape - deitado*/
+@media (min-width:576px){
+    body{
+        background: pink;
+    }
+}
+/*Tablet Portrait*/
+@media (min-width:768px){
+    body{
+        background: #5F9EA0;
+    }
+}
+/*Tablet Landscape*/
+@media (min-width:992px){
+    body{
+        background: #EEE8AA;
+    }
+}
+/*Pc*/
+@media (min-width:1200px){
+    body{
+        background: red;
+    }
+}
+
+
