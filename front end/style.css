@@ -33,15 +33,72 @@ body{
 
 /*Layout*/
 .container{
+    margin: 0 auto;
+    background: #cecece;
+}
+
+#topo{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+.flex{
     display: flex;
+    justify-content: space-between;
 }
 
 /*Celular Portrait - em pe*/
+/*cabeçalho*/
+header{
+    height: 60px;
+}
+
+#check{
+    display: none; /*esconde alguma coisa*/
+}
+
+label{
+    font-size: 3em;
+    position: fixed;
+    top: 5px;
+    right: 15px;
+}
+
+nav ul{
+    list-style: none;
+    background: var(--cor5);
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+nav ul li{
+    padding: 20px;
+    border-bottom: var(--cor5) 1px solid;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--cor1);
+    font-family: var(--texto);
+    font-size: 1.3em;
+}
+
+#check:checked ~ ul{
+    right: 0;
+}
 
 /*Celular Lansdcape - deitado*/
 @media (min-width:576px){
     body{
         background: pink;
+    }
+    .container{
+        max-width: 540px;
     }
 }
 /*Tablet Portrait*/
@@ -49,17 +106,35 @@ body{
     body{
         background: #5F9EA0;
     }
+    .container{
+        max-width: 720px;
+    }
 }
 /*Tablet Landscape*/
 @media (min-width:992px){
     body{
         background: #EEE8AA;
     }
+    .container{
+        max-width: 960px;
+    }
 }
 /*Pc*/
 @media (min-width:1200px){
     body{
-        background: red;
+        background: white;
+    }
+    .container{
+        max-width: 1140px;
+    }
+    /**cabeçalho*/
+    header{
+        height: 125px;
+    }
+    .logo img{
+        margin-top: 30px;
+        margin-left: 30px;
+
     }
 }
 
