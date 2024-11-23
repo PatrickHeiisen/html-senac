@@ -7,65 +7,76 @@
 
 /*Variaveis*/
 
-:root{
-    --cor1: #5F9EA0; /*botao*/
-    --cor2: #000000; /*fontes*/
+:root {
+    --cor1: #5F9EA0;
+    /*botao*/
+    --cor2: #000000;
+    /*fontes*/
     --cor3: #8A2BE2;
     --cor4: #F0FFFF;
     --cor5: #EEE8AA;
-    --cor6: #9ACD32; /*menu, rodape, cartao*/
+    --cor6: #9ACD32;
+    --cor7: red;
+    /*menu, rodape, cartao*/
 
     --titulo: 'Pacifico display', 'sans-serif';
     --texto: 'Sour Gummy', 'sans-serif';
 }
 
 /*Reset CSS*/
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
 }
 
-body{
-    background: #8A2BE2;
-}
-
 /*Layout*/
-.container{
+.container {
     margin: 0 auto;
-    background: #cecece;
 }
 
-#topo{
+#topo {
     position: fixed;
     right: 10px;
     bottom: 10px;
 }
 
-.flex{
+.botao {
+    text-decoration: none;
+    color: var(--cor3);
+    font-size: 1.5em;
+    font-weight: 700;
+    background: var(--cor1);
+    border: 3px solid var(--cor2);
+    border-radius: 25px;
+    padding: 10px 40px;
+}
+
+.flex {
     display: flex;
     justify-content: space-between;
 }
 
-/*Celular Portrait - em pe*/
+/*CELULAR PORTRAIT - CELULAR EM PE*/
 /*cabeçalho*/
-header{
+header {
     height: 60px;
 }
 
-#check{
-    display: none; /*esconde alguma coisa*/
+#check {
+    display: none;
+    /*esconde alguma coisa*/
 }
 
-label{
+label {
     font-size: 3em;
     position: fixed;
     top: 5px;
     right: 15px;
 }
 
-nav ul{
+nav ul {
     list-style: none;
     background: var(--cor5);
     height: 100vh;
@@ -76,66 +87,136 @@ nav ul{
     transition: all 0.5s;
 }
 
-nav ul li{
+nav ul li {
     padding: 20px;
     border-bottom: var(--cor5) 1px solid;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     color: var(--cor1);
     font-family: var(--texto);
     font-size: 1.3em;
 }
 
-#check:checked ~ ul{
+#check:checked~ul {
     right: 0;
 }
 
-/*Celular Lansdcape - deitado*/
-@media (min-width:576px){
-    body{
-        background: pink;
-    }
-    .container{
+/*DESTAQUE*/
+main {
+    height: 75vh;
+    background: url(img/banner_front.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--cor4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--titulo);
+}
+
+main h1 {
+    font-size: 3em;
+
+}
+
+main h2 {
+    font-size: 1.5em;
+    margin: 20px 0px 50px 0px;
+}
+
+/*CELULAR LANDESCAP - CELULAR DEITADO*/
+@media (min-width:576px) {
+    .container {
         max-width: 540px;
     }
-}
-/*Tablet Portrait*/
-@media (min-width:768px){
-    body{
-        background: #5F9EA0;
+
+    label {
+        right: 70px;
     }
-    .container{
+
+    /*DESTAQUE*/
+    main h1,
+    main h2 {
+        text-shadow: var(--cor2) 0.3em 0.2em 0.3em;
+    }
+}
+
+/*TABLET PORTRAIT*/
+@media (min-width:768px) {
+    .container {
         max-width: 720px;
     }
-}
-/*Tablet Landscape*/
-@media (min-width:992px){
-    body{
-        background: #EEE8AA;
+
+    label {
+        right: 35px;
     }
-    .container{
+
+    /*DESTAQUE*/
+    main {
+        height: 45vh;
+    }
+
+    main h1 {
+        font-size: 5em;
+    }
+
+    main h2 {
+        font-size: 2em;
+    }
+}
+
+/*TABLET LANDESCAPE*/
+@media (min-width:992px) {
+    .container {
         max-width: 960px;
     }
-}
-/*Pc*/
-@media (min-width:1200px){
-    body{
-        background: white;
+
+    /*DESTAQUE*/
+    main{
+        height: 70vh;
     }
-    .container{
+}
+
+/*PC*/
+@media (min-width:1200px) {
+    .container {
         max-width: 1140px;
     }
+
     /**cabeçalho*/
-    header{
+    header {
         height: 125px;
     }
-    .logo img{
+
+    .logo img {
         margin-top: 30px;
         margin-left: 30px;
+    }
 
+    label {
+        display: none;
+    }
+
+    nav ul {
+        position: static;
+        height: auto;
+        background: transparent;
+        margin-top: 50px;
+    }
+
+    nav ul li {
+        float: left;
+        border: 0;
+    }
+
+    nav ul li a {
+        color: var(--cor2);
+    }
+
+    nav ul li a:hover {
+        color: var(--cor3);
     }
 }
-
-
