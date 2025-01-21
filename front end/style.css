@@ -1,12 +1,12 @@
 @charset "UTF-8";
-
+ 
 /*Fontes Externas*/
-
+ 
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
-
+ 
 /*Variaveis*/
-
+ 
 :root {
     --cor1: #5F9EA0;
     /*botao*/
@@ -18,11 +18,11 @@
     --cor6: #9ACD32;
     --cor7: red;
     /*menu, rodape, cartao*/
-
+ 
     --titulo: 'Pacifico display', 'sans-serif';
     --texto: 'Sour Gummy', 'sans-serif';
 }
-
+ 
 /*Reset CSS*/
 * {
     margin: 0;
@@ -30,18 +30,18 @@
     border: 0;
     box-sizing: border-box;
 }
-
+ 
 /*Layout*/
 .container {
     margin: 0 auto;
 }
-
+ 
 #topo {
     position: fixed;
     right: 10px;
     bottom: 10px;
 }
-
+ 
 .botao {
     text-decoration: none;
     color: var(--cor3);
@@ -52,7 +52,7 @@
     border-radius: 25px;
     padding: 10px 40px;
 }
-
+ 
 .flex {
     display: flex;
     justify-content: space-between;
@@ -65,25 +65,57 @@
     display: flex;
     flex-direction: column;
 }
-
+ 
+.card{
+    margin-top: 25px;
+    width: 340px;
+    height: 520px;
+    background: var(--cor1);
+    border: 1px solid var(--cor1);
+    border-radius: 25px;
+    text-align: center;
+}
+.card img{
+    border-radius: 25px 25px 0px 0px;
+}
+.card h3{
+    margin-top: 15px;
+    font-family: var(--titulo);
+    font-size: 1.3em;
+}
+.card p{
+    text-align: left;
+    padding: 10px 30px 50px 30px;
+    font-family: var(--texto);
+    font-size: 1.2em;
+}
+.card a{
+    padding: 10px 100px;
+    font-family: var(--texto);
+    border: 0px;
+   
+}
+ 
+ 
+ 
 /*CELULAR PORTRAIT - CELULAR EM PE*/
 /*cabeçalho*/
 header {
     height: 60px;
 }
-
+ 
 #check {
     display: none;
     /*esconde alguma coisa*/
 }
-
+ 
 label {
     font-size: 3em;
     position: fixed;
     top: 5px;
     right: 15px;
 }
-
+ 
 nav ul {
     list-style: none;
     background: var(--cor5);
@@ -94,23 +126,23 @@ nav ul {
     width: 100%;
     transition: all 0.5s;
 }
-
+ 
 nav ul li {
     padding: 20px;
     border-bottom: var(--cor5) 1px solid;
 }
-
+ 
 nav ul li a {
     text-decoration: none;
     color: var(--cor1);
     font-family: var(--texto);
     font-size: 1.3em;
 }
-
+ 
 #check:checked~ul {
     right: 0;
 }
-
+ 
 /*DESTAQUE*/
 main {
     height: 75vh;
@@ -124,17 +156,17 @@ main {
     text-align: center;
     font-family: var(--titulo);
 }
-
+ 
 main h1 {
     font-size: 3em;
-
+ 
 }
-
+ 
 main h2 {
     font-size: 1.5em;
     margin: 20px 0px 50px 0px;
 }
-
+ 
 /*SOBRE*/
 #sobre {
     background: url(img/background5.jpg) no-repeat;
@@ -142,35 +174,35 @@ main h2 {
     background-position: center;
     padding: 50px 0px;
 }
-
+ 
 .destaque_sobre {
     display: none;
 }
-
+ 
 .texto_sobre {
     color: var(--cor2);
     padding: 0px 10px;
     font-family: var(--texto);
 }
-
+ 
 .texto_sobre h2 {
     margin-bottom: 10px;
     font-family: var(--titulo);
     font-size: 2em;
 }
-
+ 
 .texto_sobre p {
     font-size: 1.4em;
 }
-
+ 
 .topico_sobre{
     margin-top: 20px;
 }
-
+ 
 .topico_sobre img{
     margin-right: 10px;
 }
-
+ 
 /*ONE PAGE*/
 #onepage{
     padding: 50px 10px;
@@ -189,53 +221,95 @@ main h2 {
     width: 340px;
     height: 190px;
 }
-
+ 
+/*Sessão wireframe*/
+#wireframe{
+    padding: 50px, 0px;
+    background: url(img/background5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+ 
+.qrcode{
+    display: none;
+}
+ 
+.textowire span{
+    display: none;
+}
+ 
+.textowire{
+    padding: 0px, 10px;
+    color: var(--cor2);
+}
+ 
+.textowire h2{
+    margin-bottom: 10px;
+    font-family: var(--titulo);
+}
+ 
+.textowire p{
+    margin-bottom: 40px;
+    font-family: var(--texto);
+}
+ 
+/*CARTÕES*/
+#conteudo{
+    padding: 50px 0px;
+}
+#conteudo h2{
+    padding-bottom: 25px;
+    text-align: center;
+    font-size: 2.5em;
+    font-family: var(--titulo);
+}
+ 
 /*CELULAR LANDESCAP - CELULAR DEITADO*/
 @media (min-width:576px) {
     .container {
         max-width: 540px;
     }
-
+ 
     label {
         right: 70px;
     }
-
+ 
     /*DESTAQUE*/
     main h1,
     main h2 {
         text-shadow: var(--cor2) 0.3em 0.2em 0.3em;
     }
-
+ 
     /*ONE PAGE*/
     .video iframe{
         width: 560px;
         height: 315px;
     }
 }
-
+ 
 /*TABLET PORTRAIT*/
 @media (min-width:768px) {
     .container {
         max-width: 720px;
     }
-
+ 
     label {
         right: 35px;
     }
-
+ 
     /*DESTAQUE*/
     main {
         height: 45vh;
     }
-
+ 
     main h1 {
         font-size: 5em;
     }
-
+ 
     main h2 {
         font-size: 2em;
     }
-
+ 
     /*SOBRE*/
     .texto_sobre h2{
         font-size: 2.8em;
@@ -244,59 +318,59 @@ main h2 {
         font-size: 1.8em;
     }
 }
-
+ 
 /*TABLET LANDESCAPE*/
 @media (min-width:992px) {
     .container {
         max-width: 960px;
     }
-
+ 
     /*DESTAQUE*/
     main {
         height: 70vh;
     }
 }
-
+ 
 /*PC*/
 @media (min-width:1200px) {
     .container {
         max-width: 1140px;
     }
-
+ 
     /**cabeçalho*/
     header {
         height: 125px;
     }
-
+ 
     .logo img {
         margin-top: 30px;
         margin-left: 30px;
     }
-
+ 
     label {
         display: none;
     }
-
+ 
     nav ul {
         position: static;
         height: auto;
         background: transparent;
         margin-top: 50px;
     }
-
+ 
     nav ul li {
         float: left;
         border: 0;
     }
-
+ 
     nav ul li a {
         color: var(--cor2);
     }
-
+ 
     nav ul li a:hover {
         color: var(--cor3);
     }
-
+ 
     /*SOBRE*/
     .destaque_sobre{
         display: inline;
@@ -308,10 +382,26 @@ main h2 {
     #sobre{
         background-attachment: fixed; /*Efeito parallax, imagem fixa de fundo*/
     }
-
+ 
     /*ONE PAGE*/
     .flex3{
         flex-direction: row;
         align-items: center;
+    }
+ 
+    /*Seção Wireframe*/
+    #wireframe{
+        background-attachment: fixed ;
+    }
+ 
+    #wireframe span{
+        display: inline;
+        color: var(--cor1);
+        font-weight: 700;
+    }
+ 
+    .qrcode{
+        display: inline;    
+        width: 150px;
     }
 }
