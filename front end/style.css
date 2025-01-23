@@ -65,6 +65,23 @@
     display: flex;
     flex-direction: column;
 }
+
+.flex4{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.flex5{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.flex6{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
  
 .card{
     margin-top: 25px;
@@ -263,7 +280,41 @@ main h2 {
     font-size: 2.5em;
     font-family: var(--titulo);
 }
- 
+
+/*ROPA PE*/
+address{
+    padding: 35px 10px 50px 10px;
+    background: url(img/background5.jpg);
+    background-size: cover;
+    background-position: center;
+    color: var(--cor2);
+}
+address a{
+    text-decoration: none;
+    color: var(--cor2);
+}
+address img{
+    padding-top: 15px;
+}
+.icone_local{
+    display: none;
+}
+.dados{
+    margin: 30px 0px 15px 0px;
+}
+.google_maps{
+    display: none;
+}
+footer{
+    padding: 50px;
+    background: var(--cor5);
+    color: var(--cor2);
+    text-align: center;
+}
+.social{
+    margin: 15px 0px;
+}
+
 /*CELULAR LANDESCAP - CELULAR DEITADO*/
 @media (min-width:576px) {
     .container {
@@ -284,6 +335,16 @@ main h2 {
     .video iframe{
         width: 560px;
         height: 315px;
+    }
+
+    /*Roda Pe*/
+    .flex5{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .social{
+        margin: 0;
     }
 }
  
@@ -403,5 +464,24 @@ main h2 {
     .qrcode{
         display: inline;    
         width: 150px;
+    }
+
+    /*Roda Pe*/
+    .icone_local{
+        display: inline;
+    }
+    .icone_mapa{
+        display: none;
+    }
+    .google_maps{
+        display: inline;
+    }
+    .flex6{
+        flex-direction: row-reverse;
+    }
+    address{
+        font-size: 1.5em;
+        font-family: var(--texto);
+        font-weight: 700;
     }
 }
