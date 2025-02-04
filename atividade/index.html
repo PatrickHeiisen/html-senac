@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <title>Atividade</title>
+    <title>Orlando City</title>
     <!--CSS nosso-->
     <link rel="stylesheet" href="style.css">
     <!--CSS Bootstrap-->
@@ -14,58 +14,126 @@
 </head>
 
 <body>
-    <div>
+    <div class="container-fluid bg-dark text-center">
+        <a class="navbar-brand" href="#">
+            <img src="img/clubs.png" alt="Clubes">
+        </a>
         <!--Menu de navegação-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-warning text-dark">
-            <a class="navbar-brand" href="#">
-                <img src="img/orlando-logo.png" alt="Logo controle de video game">
+        <nav class="navbar navbar-expand-lg custom-navbar">
+            <a class="navbar-brand logo-container" href="#">
+                <img src="img/orlando-logo.png" alt="Clubes" class="custom-logo">
             </a>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-                    aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Alterna navegação">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Tickets</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">News</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Schedule</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    🔍︎
-                                </span>
-                            </div>
-                            <input class="form-control mr-sm-2" type="search" placeholder="search"
-                                aria-label="Pesquisar">
-                        </div>
-                    </form>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                </div>
-            </nav>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Tickets<span class="sr-only"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Schedule</a>
+                    </li>
+                </ul>
+
+                <!-- Barra de pesquisa -->
+                <form class="form-inline search-form">
+                    <input class="form-control search-input" type="search" placeholder="Search">
+                    <button class="search-btn" type="submit">🔍</button>
+                </form>
+            </div>
         </nav>
 
-        <!--Banner-->
-    <div id="carouselExampleControls" class="carousel slide d-none d-md-block" data-ride="carousel">
-        <div class="carousel-inner">
-          <div>
-            <img class="d-block w-100" src="img/banner.jpg" alt="">
-          </div>
-      </div>
-  
+        <!-- Banner -->
+        <div id="carouselExampleControls" class="carousel slide d-none d-md-block" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="img/banner.jpg" alt="Banner">
+                    <!-- Texto sobre o banner -->
+                    <div class="banner-text">
+                        <h2>Orlando City</h2>
+                        <p>Orlando City Soccer Club</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Cards-->
+        <section class="pb-3 bg-light">
+            <div class="news-text">
+                <h1 class="text-center py-3">LATEST NEWS</h1>
+            </div>
+            <div class="card-deck ">
+                <div class="card">
+                    <img class="card-img-top" src="img/noticia-thumb.jpg" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <h5 class="card-title">Orlando city arquives <br>
+                            Golakeeper Joe Bendk from <br>
+                            Toronto FC</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="img/noticia-thumb.jpg" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <h5 class="card-title">Orlando city arquives <br>
+                            Golakeeper Joe Bendk from <br>
+                            Toronto FC</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="img/noticia-thumb.jpg" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <h5 class="card-title">Orlando city arquives <br>
+                            Golakeeper Joe Bendk from <br>
+                            Toronto FC</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="img/noticia-thumb.jpg" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <h5 class="card-title">Orlando city arquives <br>
+                            Golakeeper Joe Bendk from <br>
+                            Toronto FC</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Status -->
+        <div class="status">
+            <div>
+                <h2>61348</h2>
+                <p>STADIUM CAPACITY</p>
+            </div>
+            <div>
+                <h2>2010</h2>
+                <p>FOUNDED</p>
+            </div>
+            <div>
+                <h2>7th</h2>
+                <p>EASTERN CONFERENCE</p>
+            </div>
+        </div>
+
+        <!-- Bottom Text -->
+        <div class="bottom-text text-center">
+            <p>American club number one in Brazil</p>
+            <button class="shop-btn">Shop</button>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>Popular Posts | Links | Get in Touch</p>
+            </div>
+        </footer>
+
     </div>
-
-
-
-
 
     <!--Ordem: primeiro jQuery, segundo popper, terceiro bootstrap JS-->
     <script src="scripts/jquery-3.3.1.slim.min.js"></script>
