@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <!--CSS Bootstrap-->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -23,7 +24,6 @@
             <a href="#" class="logo-container">
                 <img src="img/orlando-logo.png" alt="Orlando City Logo" class="custom-logo">
             </a>
-
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
                 aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Alterna navegação">
                 <span class="navbar-toggler-icon"></span>
@@ -43,12 +43,12 @@
                 </form>
             </div>
         </nav>
-
+        
         <!-- Banner -->
         <div id="carouselExampleControls" class="carousel slide d-none d-md-block" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="img/banner.jpg" alt="Banner">
+                    <img class="banner-logo d-block w-100" src="img/banner.jpg" alt="Banner">
                     <!-- Texto sobre o banner -->
                     <div class="banner-text">
                         <h2>Orlando City</h2>
@@ -105,14 +105,13 @@
                                 <h5 class="card-title">Orlando City Acquires <br>
                                     Goalkeeper Joe Bendik from <br>
                                     Toronto FC</h5>
-                                    <p>December 21, 2015</p>
+                                <p>December 21, 2015</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
 
         <!-- Status -->
         <div class="status">
@@ -143,47 +142,58 @@
         </div>
 
         <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="row text-center">
-                    <!-- Logo à esquerda -->
-                    <div class="col-md-3 mb-3">
-                        <img src="img/orlando-logo.png" alt="Orlando City Logo" class="footer-logo">
-                    </div>
+        <footer class="footer d-flex flex-wrap">
+            <div>
+                <img class="logo-footer ml-5" src="img/orlando-logo.png" alt="Logo Orlando City">
+            </div>
+            <div class="container max-width">
+                <div class="row">
 
                     <!-- Popular Posts -->
-                    <div class="col-md-3 mb-3">
-                        <h5>Popular Posts</h5>
-                        <p>Neque porro quisquam est, quister.</p>
-                        <p>January 01, 2016</p>
-                    </div>
-
-                    <!-- Links -->
-                    <div class="col-md-3 mb-3">
-                        <h5>Links</h5>
+                    <div class="col-md-4">
+                        <h5 class="footer-title font-weight-normal text-light">Popular Posts</h5>
+                        <hr class="linha-footer">
                         <ul class="list-unstyled">
-                            <li><a href="#">Tickets</a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Schedule</a></li>
+                            <li><a class="text-muted" href="#">Neque porro quisquam est, quister. <br> <small
+                                        class="text-p">January 01, 2016</small></a>
+                            </li>
+                            <li><a class="text-muted" href="#">Neque porro quisquam est, quister. <br> <small
+                                        class="text-p">January 01, 2016</small></a>
+                            </li>
                         </ul>
                     </div>
 
-                    <!-- Contato -->
-                    <div class="col-md-3 mb-3">
-                        <h5>Get in Touch</h5>
-                        <p>📍 618 E. South Street, Suite 510 <br>
-                            Orlando FL 32801</p>
-                        <p>📞 1.855.ORL.City</p>
+                    <!-- Links -->
+                    <div class="col-md-4">
+                        <h5 class="footer-title font-weight-normal text-light">Links</h5>
+                        <hr class="linha-footer">
+                        <ul class="list-unstyled">
+                            <li><a class="text-light" href="#">> Tickets</a></li>
+                            <li><a class="text-light" href="#">> News</a></li>
+                            <li><a class="text-light" href="#">> Schedule</a></li>
+                        </ul>
                     </div>
-                </div>
 
-                <!-- Rodapé -->
-                <div class="text-center mt-4">
-                    <p>&#169; Somente para fins educativos.</p>
+                    <!-- Get in Touch -->
+                    <div class="col-md-4">
+                        <h5 class="footer-title font-weight-normal text-light">Get in Touch</h5>
+                        <hr class="linha-footer">
+                        <p class="text-muted">618 E. South Street, Suite 510 <br> Orlando, FL 32801</p>
+                        <p class="text-muted">1.855.ORL.CITY</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
-
+        <!-- Copyright -->
+        <div class="pt-3 pb-2 d-flex justify-content-around copyright">
+            <p class="text-muted">Copyright © Orlando City Soccer 2016. All rights reserved.</p>
+        </div>
     </div>
 
     <!--Ordem: primeiro jQuery, segundo popper, terceiro bootstrap JS-->

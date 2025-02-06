@@ -1,5 +1,4 @@
 /* Navbar */
-
 .navbar-brand img {
     width: 100%; /* Faz a imagem ocupar toda a largura disponível */
     max-height: 70px; /* Ajuste a altura conforme necessário */
@@ -55,6 +54,11 @@
     color: white;
 }
 
+/* Mostra a barra de pesquisa quando ativada */
+.search-form.active {
+    display: flex;
+}
+
 /* Banner */
 .banner-text {
     position: absolute;
@@ -62,18 +66,80 @@
     left: 20px;
     transform: translateY(-50%);
     color: white;
+    width: 80%; /* Define uma largura máxima */
 }
 
 .banner-text h2 {
-    font-size: 90px;
+    font-size: 150px;
+    text-align: left;
 }
 
 .banner-text p {
-    font-size: 30px;
+    font-size: 70px;
     top: 100%;
-    left: 20px;
-    transform: translateY(-50%);
+    text-align: left;
 }
+
+/* Tablet em Pé */
+@media (max-width: 768px){
+    .banner-text h2 {
+        font-size: 4rem; /* Reduz o tamanho do título */
+    }
+
+    .banner-text p {
+        font-size: 2rem;
+    }
+
+    .navbar-brand img {
+        width: 100%; /* Faz a imagem ocupar toda a largura disponível */
+        max-height: 100px; /* Ajuste a altura conforme necessário */
+    }
+
+    .logo-container {
+        position: absolute;
+        top: 50%;
+        left: 7px; /* Ajuste conforme necessário */
+        transform: translateY(-50%);
+    }
+
+    .logo-container img {
+        width: 60%; /* Ajuste conforme necessário para o tamanho desejado */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+}
+
+/* Tablet Deitado */
+@media (max-width: 1024px){
+    .banner-text h2 {
+        font-size: 5rem; /* Reduz o tamanho do título */
+    }
+
+    .banner-text p {
+        font-size: 2.5rem;
+    }
+
+    .logo-footer {
+        display: none;
+    }
+
+    .logo-container {
+        position: absolute;
+        top: 50%;
+        left: 7px; /* Ajuste conforme necessário */
+        transform: translateY(-50%);
+    }
+
+    .logo-container img {
+        width: 70%; /* Ajuste conforme necessário para o tamanho desejado */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+}
+
+.carousel-item img {
+    height: 700px; /* Ajuste para o tamanho desejado */
+    object-fit: cover;
+}
+
 
 /* Cards */
 .card {
@@ -97,8 +163,6 @@
     font-size: 13px;
 }
 
-
-
 /* Status*/
 .status {
     background: #663399;
@@ -114,6 +178,22 @@ font-size: 40px;
 
 .status p{
     color: rgb(253, 254, 255);
+}
+
+/* Media query para telas pequenas (como celular) */
+@media (max-width: 414px) {
+    .status {
+        flex-direction: column; /* Alinha os itens em coluna em telas menores */
+        justify-content: center;
+    }
+
+    .status h2 {
+        font-size: 2rem; /* Reduz o tamanho da fonte ainda mais */
+    }
+
+    .status p {
+        font-size: 0.8rem; /* Ajusta o tamanho da fonte */
+    }
 }
 
 /* Texto Inferior */
@@ -147,23 +227,49 @@ font-size: 40px;
     margin-top: 10px;
 }
 
-
-
 /* Footer */
 .footer {
-    background-color: #222;
-    color: white;
-    padding: 30px 0;
-    text-align: left;
+    background-color: #171f26;
+    padding: 40px 0;
+}
+.footer-logo img {
+    width: 80px;
+}
+.footer-title {
+    margin-bottom: 15px;
+}
+.footer a {
+    color: #575757;
+    text-decoration: none;
+}
+.footer a:hover {
+    color: #fff;
+}
+.social-icons a {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #aaa;
 }
 
-.footer .row {
-    display: flex;
-    align-items: center;
+.social-icons i {
+    font-size: 24px;
+    color: white; /* ou outra cor visível */
+    margin-right: 10px;
 }
 
-.footer-logo {
-    width: 100px; /* Ajuste o tamanho do logo */
-    height: auto;
+
+.linha-footer {
+    border: 0.1px solid #575757;
 }
 
+.logo-footer {
+    width: 140px;
+}
+
+.text-p {
+    color: yellow;
+}
+
+.copyright {
+    background: #11171d;
+}
