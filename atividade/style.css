@@ -65,11 +65,11 @@
 }
 
 .banner-text h2 {
-    font-size: 150px;
+    font-size: 90px;
 }
 
 .banner-text p {
-    font-size: 50px;
+    font-size: 30px;
     top: 100%;
     left: 20px;
     transform: translateY(-50%);
@@ -92,6 +92,11 @@
     font-size: 15px; /* Reduz o tamanho do título */
     color: #663399;
 }
+
+.card-body p{
+    font-size: 13px;
+}
+
 
 
 /* Status*/
@@ -161,3 +166,4 @@ font-size: 40px;
     width: 100px; /* Ajuste o tamanho do logo */
     height: auto;
 }
+
