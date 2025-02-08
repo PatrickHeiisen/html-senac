@@ -1,31 +1,42 @@
 /* Navbar */
 .navbar-brand img {
-    width: 100%; /* Faz a imagem ocupar toda a largura disponível */
-    max-height: 70px; /* Ajuste a altura conforme necessário */
+    width: 100%;
+    /* Faz a imagem ocupar toda a largura disponível */
+    max-height: 70px;
+    /* Ajuste a altura conforme necessário */
 }
+
 .navbar-brand {
-    width: 70%; /* Faz a marca ocupar toda a largura */
-    justify-content: center; /* Mantém a imagem centralizada */
+    width: 70%;
+    /* Faz a marca ocupar toda a largura */
+    justify-content: center;
+    /* Mantém a imagem centralizada */
 }
 
 .custom-navbar {
     background-color: #663399;
-    padding: 20px 20px; /* Aumenta o espaçamento vertical da barra */
-    height: 100px; /* Define uma altura maior */
+    padding: 20px 20px;
+    /* Aumenta o espaçamento vertical da barra */
+    height: 100px;
+    /* Define uma altura maior */
     display: flex;
-    align-items: center; /* Mantém os itens alinhados verticalmente */
+    align-items: center;
+    /* Mantém os itens alinhados verticalmente */
 }
 
 .logo-container {
     position: absolute;
     top: 50%;
-    left: 20px; /* Ajuste conforme necessário */
+    left: 20px;
+    /* Ajuste conforme necessário */
     transform: translateY(-50%);
     z-index: 10;
 }
 
-.navbar-nav,.search-form {
-    margin-top: 10px; /* Ajusta para centralizar dentro da navbar maior */
+.navbar-nav,
+.search-form {
+    margin-top: 10px;
+    /* Ajusta para centralizar dentro da navbar maior */
 }
 
 /* barra de pesquisa */
@@ -54,9 +65,13 @@
     color: white;
 }
 
-/* Mostra a barra de pesquisa quando ativada */
-.search-form.active {
-    display: flex;
+/* Oculta o menu*/
+#burguer {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
 }
 
 /* Banner */
@@ -66,7 +81,8 @@
     left: 20px;
     transform: translateY(-50%);
     color: white;
-    width: 80%; /* Define uma largura máxima */
+    width: 80%;
+    /* Define uma largura máxima */
 }
 
 .banner-text h2 {
@@ -80,10 +96,65 @@
     text-align: left;
 }
 
+/* Celular em Pé */
+@media(max-width: 736px) {
+
+    /* Exibe o ícone do menu hamburguer */
+    #burguer {
+        display: block;
+        font-size: 32px;
+        cursor: pointer;
+        color: white;
+        padding: 10px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        /* Agora o ícone vai para a direita */
+        z-index: 1000;
+    }
+
+    /* Quando o menu estiver expandido */
+    #navbarTogglerDemo01 {
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        /* Alinha os itens à direita */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 10px 20px;
+        text-align: right;
+        z-index: 1000;
+    }
+
+    /* Ajuste dos itens do menu */
+    .navbar-nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .navbar-nav .nav-item {
+        padding: 10px;
+        text-align: right;
+        width: 100%;
+    }
+
+    #navbarTogglerDemo01.show {
+        display: flex;
+        /* Exibe o menu quando a classe "show" é adicionada */
+    }
+
+}
+
 /* Tablet em Pé */
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .banner-text h2 {
-        font-size: 4rem; /* Reduz o tamanho do título */
+        font-size: 4rem;
+        /* Reduz o tamanho do título */
     }
 
     .banner-text p {
@@ -91,27 +162,83 @@
     }
 
     .navbar-brand img {
-        width: 100%; /* Faz a imagem ocupar toda a largura disponível */
-        max-height: 100px; /* Ajuste a altura conforme necessário */
+        width: 100%;
+        /* Faz a imagem ocupar toda a largura disponível */
+        max-height: 100px;
+        /* Ajuste a altura conforme necessário */
     }
 
     .logo-container {
         position: absolute;
         top: 50%;
-        left: 7px; /* Ajuste conforme necessário */
+        left: 7px;
+        /* Ajuste conforme necessário */
         transform: translateY(-50%);
     }
 
     .logo-container img {
-        width: 60%; /* Ajuste conforme necessário para o tamanho desejado */
-        height: auto; /* Mantém a proporção da imagem */
+        width: 60%;
+        /* Ajuste conforme necessário para o tamanho desejado */
+        height: auto;
+        /* Mantém a proporção da imagem */
+    }
+
+    /*Barra de Navegação*/
+    /* Exibe o ícone do menu hamburguer */
+    #burguer {
+        display: block;
+        font-size: 32px;
+        cursor: pointer;
+        color: white;
+        padding: 10px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        /* Agora o ícone vai para a direita */
+        z-index: 1000;
+    }
+
+    /* Quando o menu estiver expandido */
+    #navbarTogglerDemo01 {
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        /* Alinha os itens à direita */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 10px 20px;
+        text-align: right;
+        z-index: 1000;
+    }
+
+    /* Ajuste dos itens do menu */
+    .navbar-nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .navbar-nav .nav-item {
+        padding: 10px;
+        text-align: right;
+        width: 100%;
+    }
+
+    #navbarTogglerDemo01.show {
+        display: flex;
+        /* Exibe o menu quando a classe "show" é adicionada */
     }
 }
 
 /* Tablet Deitado */
-@media (max-width: 1024px){
+@media (max-width: 1024px) {
     .banner-text h2 {
-        font-size: 5rem; /* Reduz o tamanho do título */
+        font-size: 5rem;
+        /* Reduz o tamanho do título */
     }
 
     .banner-text p {
@@ -125,41 +252,51 @@
     .logo-container {
         position: absolute;
         top: 50%;
-        left: 7px; /* Ajuste conforme necessário */
+        left: 7px;
+        /* Ajuste conforme necessário */
         transform: translateY(-50%);
     }
 
     .logo-container img {
-        width: 70%; /* Ajuste conforme necessário para o tamanho desejado */
-        height: auto; /* Mantém a proporção da imagem */
+        width: 70%;
+        /* Ajuste conforme necessário para o tamanho desejado */
+        height: auto;
+        /* Mantém a proporção da imagem */
     }
 }
 
 .carousel-item img {
-    height: 700px; /* Ajuste para o tamanho desejado */
+    height: 700px;
+    /* Ajuste para o tamanho desejado */
     object-fit: cover;
 }
 
 
 /* Cards */
 .card {
-    max-width: 100%; /* Garante que os cards não fiquem muito largos */
+    max-width: 100%;
+    /* Garante que os cards não fiquem muito largos */
     text-align: left;
 }
+
 .card img {
-    height: 170px; /* Diminui o tamanho da imagem */
-    object-fit: cover; /* Evita distorções */
+    height: 170px;
+    /* Diminui o tamanho da imagem */
+    object-fit: cover;
+    /* Evita distorções */
 }
 
-.news-text h1{
+.news-text h1 {
     color: #663399;
 }
+
 .card-body h5 {
-    font-size: 15px; /* Reduz o tamanho do título */
+    font-size: 15px;
+    /* Reduz o tamanho do título */
     color: #663399;
 }
 
-.card-body p{
+.card-body p {
     font-size: 13px;
 }
 
@@ -172,27 +309,31 @@
     justify-content: space-around;
     align-items: center;
 }
-.status h2{
-font-size: 40px;
+
+.status h2 {
+    font-size: 40px;
 }
 
-.status p{
+.status p {
     color: rgb(253, 254, 255);
 }
 
 /* Media query para telas pequenas (como celular) */
 @media (max-width: 414px) {
     .status {
-        flex-direction: column; /* Alinha os itens em coluna em telas menores */
+        flex-direction: column;
+        /* Alinha os itens em coluna em telas menores */
         justify-content: center;
     }
 
     .status h2 {
-        font-size: 2rem; /* Reduz o tamanho da fonte ainda mais */
+        font-size: 2rem;
+        /* Reduz o tamanho da fonte ainda mais */
     }
 
     .status p {
-        font-size: 0.8rem; /* Ajusta o tamanho da fonte */
+        font-size: 0.8rem;
+        /* Ajusta o tamanho da fonte */
     }
 }
 
@@ -232,19 +373,24 @@ font-size: 40px;
     background-color: #171f26;
     padding: 40px 0;
 }
+
 .footer-logo img {
     width: 80px;
 }
+
 .footer-title {
     margin-bottom: 15px;
 }
+
 .footer a {
     color: #575757;
     text-decoration: none;
 }
+
 .footer a:hover {
     color: #fff;
 }
+
 .social-icons a {
     font-size: 1.5rem;
     margin-right: 15px;
@@ -253,7 +399,8 @@ font-size: 40px;
 
 .social-icons i {
     font-size: 24px;
-    color: white; /* ou outra cor visível */
+    color: white;
+    /* ou outra cor visível */
     margin-right: 10px;
 }
 
